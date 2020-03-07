@@ -1,0 +1,3 @@
+I am responsible for the new use case descriptions as well as the minor release for it. I implemented the minor release for both Setup Game and Take a turn use case as well. Jeff took over one of the new use case. 
+
+Jynn Leong
