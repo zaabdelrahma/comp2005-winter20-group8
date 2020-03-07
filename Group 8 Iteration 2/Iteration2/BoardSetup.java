@@ -14,7 +14,7 @@ public class BoardSetup extends JFrame implements ActionListener{
     private Icon chip;
     private JTable scoreboard;
     private JButton savegame, exitgame, hint, startclock, resetclock, pauseclock;
-    private JLabel whos_turn, which_chip, timer_label, scoreboard_label, taketurn, time, visual_option;
+    private JLabel whos_turn, which_chip, timer_label, scoreboard_label, taketurn, time, visual_option, timesup;
     private BoardGrid[][] grid; 
     private int players, hour, minutes, visualoption, pausetime;
     private String lexicon;
@@ -107,6 +107,7 @@ public class BoardSetup extends JFrame implements ActionListener{
         // Set the "time" JLabel to display the time for each round
         String countdown = secondsToString(60);
         time = new JLabel(countdown);
+        timesup = new JLabel();
 
         // Setting random letter as the destination chip
         int i = rand.nextInt(lexicon.length());
@@ -185,6 +186,10 @@ public class BoardSetup extends JFrame implements ActionListener{
         timer.add(pauseclock);
         timer.add(resetclock);
 
+        playerturn.setLayout(new GridLayout(2,1));
+        playerturn.add(whos_turn);
+        playerturn.add(timesup);
+
         // Scoreboard 
         scoreboard_panel.setLayout(new GridLayout(2,1));
         scoreboard_panel.add(scoreboard_label);
@@ -192,7 +197,7 @@ public class BoardSetup extends JFrame implements ActionListener{
 
         // The information panel of the game
         userpanel.setLayout(new GridLayout(4,1,20,20));
-        userpanel.add(whos_turn);
+        userpanel.add(playerturn);
         userpanel.add(chipdeck);
         userpanel.add(timer);
         userpanel.add(scoreboard_panel);
@@ -242,6 +247,11 @@ public class BoardSetup extends JFrame implements ActionListener{
                     // For each second, the "time" JLabel will update itself
                     time.setText(secondsToString(secondsPassed));
                     secondsPassed--;
+                    if(secondsPassed == -1){
+                        newtimer.stop();
+                        timesup.setText("Time's up");
+                        time.setText(secondsToString(60));
+                    }
                 }
             });
             newtimer.start();
