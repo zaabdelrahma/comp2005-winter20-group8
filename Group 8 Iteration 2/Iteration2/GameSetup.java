@@ -153,26 +153,35 @@ public class GameSetup extends JFrame implements ActionListener {
             // Get the number of human player(s)
             Integer o = (Integer)numberofusers.getSelectedItem();
             int playersselection = o.intValue();
-            if(boardoption.equals("simple")){ // 0 represents Simple settings
-                if(visualoption.equals("Text")){ // 0 represents Text settings
-                    BoardSetup b = new BoardSetup(16, 16, playersselection, 0, 0); //BoardSetup(int x, int y, int players, int visualoption, int difficulty)
+            StringBuilder sb = new StringBuilder();
+            sb.append("Number of player(s): " + playersselection + "\n");
+            sb.append("Board Settings: " + boardoption + "\n");
+            sb.append("Visual Settings: " + visualoption);
+
+            // Shows a confirmation dialog to the user, if it's correct it will bring player(s) to the main game, allows user to choose again if incorrect
+            int option = JOptionPane.showConfirmDialog(this.getContentPane(), sb.toString(), "Confirmation", JOptionPane.YES_NO_OPTION);
+            if(option == JOptionPane.YES_OPTION){
+                if(boardoption.equals("simple")){ // 0 represents Simple settings
+                    if(visualoption.equals("Text")){ // 0 represents Text settings
+                        BoardSetup b = new BoardSetup(16, 16, playersselection, 0, 0); //BoardSetup(int x, int y, int players, int visualoption, int difficulty)
+                    }
+                    else if(visualoption.equals("Color")){ // 1 represents Color settings
+                        BoardSetup b = new BoardSetup(16, 16, playersselection, 1, 0);
+                    }
+                    else{ // 2 represents Text and Color settings
+                        BoardSetup b = new BoardSetup(16, 16, playersselection, 2, 0);
+                    }
                 }
-                else if(visualoption.equals("Color")){ // 1 represents Color settings
-                    BoardSetup b = new BoardSetup(16, 16, playersselection, 1, 0);
-                }
-                else{ // 2 represents Text and Color settings
-                    BoardSetup b = new BoardSetup(16, 16, playersselection, 2, 0);
-                }
-            }
-            else{ // 1 represents complex settings
-                if(visualoption.equals("Text")){
-                    BoardSetup b = new BoardSetup(16, 16, playersselection, 0, 1);
-                }
-                else if(visualoption.equals("Color")){
-                    BoardSetup b = new BoardSetup(16, 16, playersselection, 1, 1);
-                }
-                else{
-                    BoardSetup b = new BoardSetup(16, 16, playersselection, 2, 1);
+                else{ // 1 represents complex settings
+                    if(visualoption.equals("Text")){
+                        BoardSetup b = new BoardSetup(16, 16, playersselection, 0, 1);
+                    }
+                    else if(visualoption.equals("Color")){
+                        BoardSetup b = new BoardSetup(16, 16, playersselection, 1, 1);
+                    }
+                    else{
+                        BoardSetup b = new BoardSetup(16, 16, playersselection, 2, 1);
+                    }
                 }
             }
         }
