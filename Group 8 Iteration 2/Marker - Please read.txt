@@ -1,0 +1,10 @@
+The code submitted this iteration includes the implementation of the take a turn, setup game, timer, as well as the visual settings use case.
+
+Once the program starts, it will take the user to the Game setup menu. In the menu, it will give user the option to choose the number of human player(s), board settings, and visual settings. 
+
+With text option, the board will only feature letters. With color option, the board will feature colored shapes. With color and text option, the board will feature both colored shapes and letters.
+
+After the user chose the game setup options, the system will show player(s) a confirmation dialog. If incorrect, the system allows the player(s) to reselect their options. If the settings are correct, it will then take the player(s) to the take a turn/main game menu. In it, player(s) will be able to see their score, the destination chip, the timer, and whose turn it is. 
+
+With each round, the user can start the timer to which the time will start its countdown. 
+
