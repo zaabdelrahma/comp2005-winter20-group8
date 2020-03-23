@@ -1,0 +1,22 @@
+This iteration focuses on the Robot movement, saving and resuming the game.
+
+The current state of the project on works well for 4 human players with the computer player section being implemented in future iteration.
+
+In addition to the movement of the robot, different colored steps represent different directions. 
+
+Yellow - Up
+Red - Down
+Blue - Right
+Green - Left
+
+For each player, they have the option to choose the robot piece from the panelboard. The board will have few bugs such as the steps covering the icon pieces. That is to be fixed in the next iteration.
+
+When players resume the saved game, it will only show the pieces on the board and not the steps. Similarly, the board will clean itself up and only show the pieces once the reset timer button is clicked. 
+
+Comparing to the last submission, the difference here would be the absence of a nested JPanel in the main board. This is implemented to prevent complicated and messy coding, as well as to prevent future complications. Instead, the icons are now drawn within the same class that it's instantiated. With that said, all functions are up for future revisions. 
+
+
+Note to markers:
+1) The current iteration works as intended when four human players are selected
+2) "Color" and "Simple Board" are the only selections where the robot movement, saving and resuming game functions work
+3) All other options will be fully implemented come the next iteration 
