@@ -443,7 +443,7 @@ public class BoardSetup extends JFrame implements ActionListener, MouseListener 
         playerturn.add(arrows);
         playerturn.add(resetrobotselection);
         playerturn.add(resetmove);
-        enableComponents(playerturn, true);
+        enableComponents(playerturn, false);
         if(this.difficulty == 1){ // If "Complex board" is chosen, players will no be able to reset the board to its original state
             resetmove.setVisible(false);
         }
