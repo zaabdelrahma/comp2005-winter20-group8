@@ -23,3 +23,4 @@ Save and Load:
     The resume button can be found on the setup menu. 
 
 * A video showcasing the gameplay will be provided*
+* The controlling panel is enabled in the video to showcase the movement of the robots and the buttons that are not intuitively clear *
