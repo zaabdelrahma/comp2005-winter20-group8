@@ -1,0 +1,25 @@
+Welcome to our Ricochet Robot! The current working model supports ONLY the use of four human players. It has been tested to work on both Linux and MacOS.
+
+All computer player related buttons and functions are currently unavailable. Namely the "Hint" button as well as the actual sequence for computer player(s). Hence, the "Hint" button has been disabled. The setup menu still features the option to select the number of human player(s). 
+
+
+Setup Menu:
+    The game will continue should the player(s) leave one or both of the settings blank. The system will randomise the settings. 
+    The menu also features a "Help" button to help the user setting the game up.
+
+
+Main game menu:
+    The main difference from this working model to the previous iterations would be the timer settings. Adhering to the rules of the Ricochet Robot board game. The first person to enter their bid will then start the timer as well. Hence, the button "Enter bid (Start)" works the same way in which the first person to figure out the moves will then enter their bid and thereby starts the timer. Other players can subsequently enter their bid or improve their own bid before the timer runs out. No player will be allowed to move the robots before the timer ends. Hence, the controlling panel will be disabled before the timer ends. 
+
+    Should there only be one player bidding moves. That player will be the player to play the round.
+
+    For each move, the player would have to select the intended robot and click on the direction that the player wishes for the robot to move. However, player cannot choose the directions one after another. Should the player wishes to move the robot again, they would have to select the robot piece and the direction again. 
+
+    Furthermore, two buttons(Reset robot selection and Reset moves) are now added. It allows player to reset the robot selection should the player select the wrong robot. The reset moves buttons allow player to reset their board back to the original state before any movements. However, this could only be used once. 
+
+Save and Load:
+    This function is fully implemented. Once the user wishes to save the game, the system will then prompt a popup window, giving the players an option to conitnue playing or exit the game. The same goes for the "Exit" button, the game will give players the option to save the game or exit the game without saving.
+
+    The resume button can be found on the setup menu. 
+
+* A video showcasing the gameplay will be provided*
